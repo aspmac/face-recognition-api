@@ -3,6 +3,8 @@ import bcrypt from 'bcrypt-nodejs';
 import cors from 'cors';
 import knex from 'knex';
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
 	client: 'pg',
 	connection: {
