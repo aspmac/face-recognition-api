@@ -6,10 +6,8 @@ import knex from 'knex';
 const db = knex({
 	client: 'pg',
 	connection: {
-	    host : 'postgresql-cylindrical-45529',
-	    user : 'postgres',
-	    password : 'awesomecool!@',
-	    database : 'face-recognition-database'
+	    host : process.env.DATABASE_URL,
+	    ssl:true
 	}
 });
 
